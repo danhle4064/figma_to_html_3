@@ -379,3 +379,39 @@ a {
   margin-top: 38px;
   justify-content: center;
 }
+/* ====================install mobile==================== */
+.install {
+  padding: 265px 0 170px;
+}
+.install__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  background: #2e80ce;
+  height: 427px;
+  padding: 0 70px;
+}
+.install__img {
+  position: absolute;
+  width: 284px;
+  height: 522px;
+  object-fit: cover;
+  bottom: 0;
+}
+.install__content {
+  width: 586px;
+}
+.install__desc,
+.install__heading {
+  color: #fff;
+}
+.install__heading {
+  width: 489px;
+}
+.install__row {
+  margin-top: 38px;
+  display: flex;
+  gap: 38px;
+}
