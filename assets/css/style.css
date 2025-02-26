@@ -267,3 +267,41 @@ a {
   line-height: 1.75;
   margin-top: 18px;
 }
+/* ====================about==================== */
+.about {
+  padding: 170px 0 291px;
+  background: cyan;
+}
+.about-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about__media {
+  width: 49%;
+}
+.about-content {
+  width: 40%;
+}
+.about__img {
+  position: relative;
+}
+.about__img--big {
+  display: flex; /*bỏ khoảng hở nhỏ dưới bức ảnh*/
+  width: 512px;
+  height: 370px;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.07);
+}
+.about__img--small {
+  position: absolute;
+  top: 121px;
+  left: 238px;
+  width: 332px;
+  height: 370px;
+  border-radius: 6px;
+}
+.about-content__btn {
+  margin-top: 38px;
+}
