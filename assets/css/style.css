@@ -83,3 +83,62 @@ a {
   margin-right: 7px;
   /* do padding ta dùng chung với .navbar__link đã cách 21px rồi; theo thiết kế là cách 28px nên ta chỉ cần cách thêm 7px*/
 }
+/* ====================hero==================== */
+.hero {
+  display: flex;
+  padding-top: 76px;
+  align-items: center;
+}
+.hero__content {
+  width: 44%;
+}
+.hero__media {
+  flex: 1; /*chiếm hết không gian còn lại*/
+}
+.hero__heading {
+  color: #fff;
+  font-size: 7rem;
+  font-weight: 600;
+  line-height: 1.14;
+  letter-spacing: -1.4px;
+}
+.hero__desc {
+  color: #c9d2da;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.67;
+  margin-top: 22px;
+}
+.hero__row {
+  margin-top: 38px;
+  /* do button và thẻ span đã có cách nhau 1 đoạn nhỏ, nên ta dùng display:flex để thu hẹp lại kịch nhau, sau đó dùng gap để dãn ra */
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+.hero__phone {
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.67;
+}
+.hero__images {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.hero__img--large {
+  width: 330px;
+  height: 540px;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-right: -6px;
+  z-index: 1; /*ảnh 1 đè lên ảnh 2*/
+}
+.hero__img--small {
+  width: 210px;
+  height: 410px;
+  border-radius: 0px 6px 6px 0px;
+  object-fit: cover;
+}
