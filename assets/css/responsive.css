@@ -1,0 +1,91 @@
+/* nhỏ hơn dùng max-width; lớn hơn dùng min-width */
+/* PC */
+/* min-width: màn hình rộng tối thiểu bao nhiêu thì áp dụng */
+/* nếu màn hình >= 992px thì áp dụng css riêng */
+@media (min-width: 992px) {
+}
+
+/* mobile và tablet */
+/* max-width: cho phép tối đa màn hình rộng bao nhiêu thì áp dụng */
+/* nếu màn hình <= 992 (992-0.02) thì áp dụng css riêng  */
+@media (max-width: 991.98px) {
+  /* 1. ẩn navbar trên tablet và mobile */
+  .navbar {
+    display: none;
+  }
+  /* 2. chuyển logo vào giữa */
+  .header-top {
+    position: relative;
+  }
+  .head__logo {
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%; /*căn giữa logo với header-top*/
+  }
+  /* 3. căn lại vị trí menu icon */
+  .menu-header__icon {
+    position: absolute;
+    top: 38px;
+    left: 27px;
+    color: white;
+    width: 24px;
+  }
+  /* 4. overlay */
+  .menu-overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    inset: 0; /*cách ở 4 cạnh là 0, bao quanh bằng màu xanh*/
+    z-index: 1; /*để lớp phủ được ưu tiên không bị hình che*/
+    /* bình thưởng ẩn overlay đi */
+    opacity: 0; /*trong suốt overlay hoàn toàn nhưng không tương tác được*/
+    visibility: hidden; /*ẩn hẳn phần tử khỏi giao diện thì mới tương tác được*/
+    transition: 0.5s;
+  }
+  /* 5. kiểm tra menu checkbox có được checked thì hiện overlay */
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+    /* khi kích vào lớp phủ đồng thời cũng tắt menu thì lớp phủ cũng for đến menu checkbox */
+  }
+  /* 6. menu drawer */
+  .menu-drawer {
+    position: fixed;
+    background-color: #2e1919;
+    inset: 0 40% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    padding: 60px;
+  }
+  /* 7. nếu checkbox được check thì hiện menu */
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+  /* 8. menu top */
+  .close__menu {
+    width: 24px;
+    color: white;
+  }
+  .menu-drawer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #navbar__list--mobile {
+    margin-top: 25px;
+  }
+  .navbar__link {
+    display: block;
+    font-size: 2rem;
+    text-align: left;
+  }
+  .navbar__link:hover {
+    background-color: #00ffff37;
+  }
+}
+/* tablet */
+@media (min-width: 768px) and (max-width: 991.98) {
+}
+/* mobile */
+@media (max-width: 767.98px) {
+}
