@@ -3,6 +3,9 @@
 /* min-width: màn hình rộng tối thiểu bao nhiêu thì áp dụng */
 /* nếu màn hình >= 992px thì áp dụng css riêng */
 @media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
 }
 
 /* mobile và tablet */
@@ -81,6 +84,46 @@
   }
   .navbar__link:hover {
     background-color: #00ffff37;
+  }
+
+  /* ====================hero==================== */
+  .hero {
+    flex-direction: column;
+    gap: 50px;
+  }
+  /* thay đổi vị trí khối hero-media lên trên và khối hero-content xuống dưới bằng order */
+  .hero__content {
+    order: 2;
+  }
+  .hero__media {
+    order: 1;
+  }
+  .hero__content {
+    /* điều chỉnh độ rộng cho hợp lý */
+    width: 80%;
+    text-align: center;
+    margin: 22px auto;
+  }
+  .hero__row {
+    /* căn giữa button book-now và sđt */
+    justify-content: center;
+  }
+  /* ====================service==================== */
+  .service__row {
+    /* xoay dọc nội dung và hình ảnh */
+    flex-direction: column;
+    gap: 20px;
+  }
+  .service__img {
+    width: 100%;
+  }
+  .service-item {
+    width: 90%;
+    text-align: start; /*tác động vào service-item để canh trái cho các item*/
+  }
+  .service__list {
+    /* tác động vào thẻ cha service-list để canh giữa button */
+    text-align: center;
   }
 }
 /* tablet */
