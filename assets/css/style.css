@@ -258,7 +258,7 @@ a {
   padding: 100px 0 100px;
   background: #f6fbff;
 }
-.work .work__desc {
+.work__desc {
   width: 468px;
 }
 .work__list {
@@ -409,7 +409,7 @@ a {
   bottom: 0;
 }
 .install__content {
-  width: 586px;
+  min-width: 586px;
 }
 .install__desc,
 .install__heading {
